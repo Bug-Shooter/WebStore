@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebStore</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="sidenav" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+        <header class="mb-2 gradient-purple">
+            <nav class="navbar navbar-dark navbar-expand p-0">
+                <div class="container navbar-collapse navbar-dark">
+                    <ul class="navbar-nav">
+                        <li class="navbar-text me-3"><i class="bi bi-geo-alt-fill text-light"></i> Смоленск</></li>
+                        <li class="navbar-text me-3"><i class="bi bi-telephone text-light"></i> +7(xxx)yyy-zz-vv</li>
+                    </ul>
+                    <partial name="_SingedUpPartial" />
+                </div>
+            </nav>
+            <nav class="navbar navbar-dark navbar-expand-md">
+                <div class="container p-0">
+                    <div class="row p-0 m-0" style="width:100%">
+                        <div class="col-sm-auto">
+                            <h1 class="me-1"><i class="bi bi-list-nested text-light rounded" onclick="openNav()"></i></h1>
+                        </div>
+                        <div class="col-sm-auto">
+                            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                                <h1><em>WebStore</em></h1>
+                            </a>
+                            </div>
+                            @*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>*@
+                            <div class="col-sm-8 mt-2">
+                                <form>
+                                    <input class="form-control rounded-pill bg-transparent-4 text-dark text-center border-1 border-light placeholder-light" type="text" placeholder="Искать.." aria-label="Search">
+                                </form>
+                            </div>
+                            <div class="col-sm-auto">
+                                <partial name="_LoginPartial" />
+                            </div>
+                        </div>
+                        @*<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <form>
+                        <input class="form-control rounded-pill bg-transparent-4 text-dark text-center border-1 border-light placeholder-light" type="text" placeholder="Искать.." aria-label="Search">
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </li>
+            </ul>
+            <partial name="_LoginPartial" />
+        </div>*@
+                    </div>
+            </nav>
+        </header>
+        <div class="container-fluid maincontainer gradient-body">
+            <main role="main" class="pb-4">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - WebStore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

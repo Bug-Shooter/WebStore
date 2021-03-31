@@ -1,0 +1,18 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@*<ul class="navbar-nav">*@
+@if (SignInManager.IsSignedIn(User))
+{
+    <span class="nav-item">
+        <a  class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Профиль</a>
+    </span>
+}
+else
+{
+    <span class="nav-item">
+        <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Войти</a>
+    </span>
+}
+@*</ul>*@

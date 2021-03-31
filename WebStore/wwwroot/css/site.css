@@ -1,0 +1,117 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    min-height: 100vh
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+.maincontainer{
+    max-width:97vw;
+    min-height:100vh;
+    border-radius:3em;
+}
+/*Gradient
+--------------------------------------------------*/
+.gradient-purple {
+    /*    background: radial-gradient(at top left, #f977d1, #623AA2);*/
+    background-image: linear-gradient( 135deg, #F97794 4%, #a5559b 20%, #623AA2 80%, #a23369 100%);
+}
+.gradient-body {
+    background-image: linear-gradient( 135deg, #FFF5C3 10%, #9452A5 100%);
+}
+.bg-transparent-4 {
+   background-color: rgba(255, 255, 255, 0.40);
+}
+/*Sidenav
+----------------------------------------------------*/
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 ширина - изменить это с помощью JavaScript */
+    position: fixed; /* Оставайтесь на месте */
+    z-index: 1001; /* Оставайтесь сверху */
+    top: 0; /* Оставайтесь наверху */
+    left: 0;
+    background-color: #d3c0f1; /* Фон черный*/
+    overflow-x: hidden; /* Отключить горизонтальную прокрутку */
+    padding-top: 60px; /* Поместите контент в 60px сверху */
+    transition: 0.5s; /* 0.5 второй эффект перехода слайда в боковой навигации */
+    opacity:0.8
+}
+
+/*Placeholder
+---------------------------------*/
+input.placeholder-light::-webkit-input-placeholder {
+    color: #fff;
+}
+
+input.placeholder-light::-moz-placeholder {
+    color: #fff;
+}
+
+input.placeholder-light:-moz-placeholder {
+    color: #fff;
+}
+input.placeholder-light:-ms-input-placeholder {
+    color: #fff;
+}
